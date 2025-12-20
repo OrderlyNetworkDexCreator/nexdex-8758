@@ -3,17 +3,17 @@
   --oui-font-size-base: 16px;
 
   /* colors */
-  --oui-color-primary: 255 255 255;
-  --oui-color-primary-light: 255 255 255;
-  --oui-color-primary-darken: 0 0 0;
+  --oui-color-primary: 176 184 199;
+  --oui-color-primary-light: 200 208 218;
+  --oui-color-primary-darken: 135 145 160;
   --oui-color-primary-contrast: 0 0 0;
 
-  --oui-color-link: 255 255 255;
-  --oui-color-link-light: 255 255 255;
+  --oui-color-link: 176 184 199;
+  --oui-color-link-light: 200 208 218;
 
-  --oui-color-secondary: 255 255 255;
-  --oui-color-tertiary: 255 255 255;
-  --oui-color-quaternary: 255 255 255;
+  --oui-color-secondary: 150 160 175;
+  --oui-color-tertiary: 130 140 155;
+  --oui-color-quaternary: 110 120 135;
 
   --oui-color-danger: 245 97 139;
   --oui-color-danger-light: 255 160 180;
@@ -30,22 +30,22 @@
   --oui-color-warning-darken: 200 200 0;
   --oui-color-warning-contrast: 0 0 0;
 
-  --oui-color-fill: 0 0 0;
-  --oui-color-fill-active: 50 50 50;
+  --oui-color-fill: 24 20 35;
+  --oui-color-fill-active: 40 36 50;
 
-  --oui-color-base-1: 36 32 47;
-  --oui-color-base-2: 34 30 45;
-  --oui-color-base-3: 32 28 43;
-  --oui-color-base-4: 30 26 41;
-  --oui-color-base-5: 28 24 39;
-  --oui-color-base-6: 26 22 37;
-  --oui-color-base-7: 24 20 35;
-  --oui-color-base-8: 22 18 33;
-  --oui-color-base-9: 20 16 31;
-  --oui-color-base-10: 0 0 0;
+  --oui-color-base-1: 48 46 56;
+  --oui-color-base-2: 44 42 52;
+  --oui-color-base-3: 40 38 48;
+  --oui-color-base-4: 36 34 44;
+  --oui-color-base-5: 32 30 40;
+  --oui-color-base-6: 28 26 36;
+  --oui-color-base-7: 24 22 32;
+  --oui-color-base-8: 20 18 28;
+  --oui-color-base-9: 16 14 24;
+  --oui-color-base-10: 12 11 18;
 
-  --oui-color-base-foreground: 255 255 255;
-  --oui-color-line: 51 46 66;
+  --oui-color-base-foreground: 220 224 235;
+  --oui-color-line: 36 34 44;
 
   --oui-color-trading-loss: 245 97 139;
   --oui-color-trading-loss-contrast: 255 255 255;
@@ -53,11 +53,11 @@
   --oui-color-trading-profit-contrast: 255 255 255;
 
   /* gradients */
-  --oui-gradient-primary-start: 255 255 255;
-  --oui-gradient-primary-end: 200 200 200;
+  --oui-gradient-primary-start: 176 184 199;
+  --oui-gradient-primary-end: 135 145 160;
 
-  --oui-gradient-secondary-start: 255 255 255;
-  --oui-gradient-secondary-end: 200 200 200;
+  --oui-gradient-secondary-start: 150 160 175;
+  --oui-gradient-secondary-end: 110 120 135;
 
   --oui-gradient-success-start: 41 233 169;
   --oui-gradient-success-end: 30 200 140;
@@ -65,8 +65,8 @@
   --oui-gradient-danger-start: 245 97 139;
   --oui-gradient-danger-end: 200 0 0;
 
-  --oui-gradient-brand-start: 255 255 255;
-  --oui-gradient-brand-end: 200 200 200;
+  --oui-gradient-brand-start: 176 184 199;
+  --oui-gradient-brand-end: 135 145 160;
   --oui-gradient-brand-stop-start: 6.62%;
   --oui-gradient-brand-stop-end: 86.5%;
   --oui-gradient-brand-angle: 17.44deg;
@@ -106,4 +106,40 @@ html, body {
 /* кастом поверх темы Aden */
 .oui-scaffold-footer-powered-by {
   display: none !important;
+}
+
+/* TradingView header container */
+.tv-header,
+.tv-chart__header,
+.chart-controls-bar {
+  background: #0B0F14 !important; /* твой основной фон */
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Текст в header */
+.tv-header *,
+.chart-controls-bar * {
+  color: #8FA3B8 !important; /* muted institutional */
+  font-size: 11px !important;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+/* Links (powered by TradingView) */
+.tv-header a,
+.chart-controls-bar a {
+  color: #8FA3B8 !important;
+  text-decoration: none;
+}
+
+.tv-header a:hover {
+  opacity: 1;
+}
+
+/* Уменьшаем высоту */
+.tv-header,
+.chart-controls-bar {
+  min-height: 28px !important;
+  height: 28px !important;
+  padding: 0 12px !important;
 }
