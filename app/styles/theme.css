@@ -143,3 +143,17 @@ html, body {
   height: 28px !important;
   padding: 0 12px !important;
 }
+
+/* TradingView bottom attribution bar */
+.tv-chart__footer,
+.tv-footer,
+.chart-controls-bar,
+[data-name="legend-source-item"],
+a[href*="tradingview.com"] {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+
